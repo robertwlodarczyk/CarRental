@@ -18,5 +18,21 @@ public abstract class AbstractDao<T> {
             transaction.commit();
             session.close();
         }
+
+        public void drop(T record){
+            Session session = SessionProvider.getSession();
+            Transaction transaction = session.beginTransaction();
+            session.delete(record);
+            transaction.commit();
+            session.close();
+        }
+
+        public void update(T record){
+            Session session = SessionProvider.getSession();
+            Transaction transaction = session.beginTransaction();
+            session.update(record);
+            transaction.commit();
+            session.close();
+        }
     }
 
