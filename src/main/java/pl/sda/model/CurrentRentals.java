@@ -34,12 +34,12 @@ public class CurrentRentals {
     public CurrentRentals() {
     }
 
-    public CurrentRentals(String rent_id, String cust_id, String reg_number, String rent_date, String return_date) {
-        this.rentId = rent_id;
-        this.custId = cust_id;
-        this.regNumber = reg_number;
-        this.rentDate = rent_date;
-        this.returnDate = return_date;
+    public CurrentRentals(String rentId, String custId, String regNumber, String rentDate, String returnDate) {
+        this.rentId = rentId;
+        this.custId = custId;
+        this.regNumber = regNumber;
+        this.rentDate = rentDate;
+        this.returnDate = returnDate;
     }
 
     @Override

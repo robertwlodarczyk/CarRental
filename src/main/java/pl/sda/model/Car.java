@@ -34,11 +34,11 @@ public class Car {
     public Car() {
     }
 
-    public Car(String mark, String model, String colour, String reg_number, String condition) {
+    public Car(String mark, String model, String colour, String regNumber, String condition) {
         this.mark = mark;
         this.model = model;
         this.colour = colour;
-        this.regNumber = reg_number;
+        this.regNumber = regNumber;
         this.condition = condition;
     }
 
