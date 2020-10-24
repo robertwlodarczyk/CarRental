@@ -2,10 +2,11 @@ package pl.sda.model;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
+
+@Entity
+@Table(name = "car")
 
 public class Car {
 
@@ -25,7 +26,7 @@ public class Car {
     private String colour;
 
     @Column
-    private String reg_number;
+    private String regNumber;
 
     @Column
     private String condition;
@@ -37,7 +38,7 @@ public class Car {
         this.mark = mark;
         this.model = model;
         this.colour = colour;
-        this.reg_number = reg_number;
+        this.regNumber = reg_number;
         this.condition = condition;
     }
 
@@ -48,7 +49,7 @@ public class Car {
                 ", mark='" + mark + '\'' +
                 ", model='" + model + '\'' +
                 ", colour='" + colour + '\'' +
-                ", reg_number='" + reg_number + '\'' +
+                ", reg_number='" + regNumber + '\'' +
                 ", condition='" + condition + '\'' +
                 '}';
     }
@@ -62,13 +63,13 @@ public class Car {
                 Objects.equals(mark, car.mark) &&
                 Objects.equals(model, car.model) &&
                 Objects.equals(colour, car.colour) &&
-                Objects.equals(reg_number, car.reg_number) &&
+                Objects.equals(regNumber, car.regNumber) &&
                 Objects.equals(condition, car.condition);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, mark, model, colour, reg_number, condition);
+        return Objects.hash(id, mark, model, colour, regNumber, condition);
     }
 
     public int getId() {
@@ -103,12 +104,12 @@ public class Car {
         this.colour = colour;
     }
 
-    public String getReg_number() {
-        return reg_number;
+    public String getRegNumber() {
+        return regNumber;
     }
 
-    public void setReg_number(String reg_number) {
-        this.reg_number = reg_number;
+    public void setRegNumber(String regNumber) {
+        this.regNumber = regNumber;
     }
 
     public String getCondition() {

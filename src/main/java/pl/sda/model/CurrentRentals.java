@@ -2,10 +2,11 @@ package pl.sda.model;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
+
+@Entity
+@Table(name = "currentRentals")
 
 public class CurrentRentals {
 
@@ -16,40 +17,40 @@ public class CurrentRentals {
     private int id;
 
     @Column
-    private String rent_id;
+    private String rentId;
 
     @Column
-    private String cust_id;
+    private String custId;
 
     @Column
-    private String reg_number;
+    private String regNumber;
 
     @Column
-    private String rent_date;
+    private String rentDate;
 
     @Column
-    private String return_date;
+    private String returnDate;
 
     public CurrentRentals() {
     }
 
     public CurrentRentals(String rent_id, String cust_id, String reg_number, String rent_date, String return_date) {
-        this.rent_id = rent_id;
-        this.cust_id = cust_id;
-        this.reg_number = reg_number;
-        this.rent_date = rent_date;
-        this.return_date = return_date;
+        this.rentId = rent_id;
+        this.custId = cust_id;
+        this.regNumber = reg_number;
+        this.rentDate = rent_date;
+        this.returnDate = return_date;
     }
 
     @Override
     public String toString() {
         return "CurrentRentals{" +
                 "id=" + id +
-                ", rent_id='" + rent_id + '\'' +
-                ", cust_id='" + cust_id + '\'' +
-                ", reg_number='" + reg_number + '\'' +
-                ", rent_date='" + rent_date + '\'' +
-                ", return_date='" + return_date + '\'' +
+                ", rent_id='" + rentId + '\'' +
+                ", cust_id='" + custId + '\'' +
+                ", reg_number='" + regNumber + '\'' +
+                ", rent_date='" + rentDate + '\'' +
+                ", return_date='" + returnDate + '\'' +
                 '}';
     }
 
@@ -59,16 +60,16 @@ public class CurrentRentals {
         if (o == null || getClass() != o.getClass()) return false;
         CurrentRentals that = (CurrentRentals) o;
         return id == that.id &&
-                Objects.equals(rent_id, that.rent_id) &&
-                Objects.equals(cust_id, that.cust_id) &&
-                Objects.equals(reg_number, that.reg_number) &&
-                Objects.equals(rent_date, that.rent_date) &&
-                Objects.equals(return_date, that.return_date);
+                Objects.equals(rentId, that.rentId) &&
+                Objects.equals(custId, that.custId) &&
+                Objects.equals(regNumber, that.regNumber) &&
+                Objects.equals(rentDate, that.rentDate) &&
+                Objects.equals(returnDate, that.returnDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, rent_id, cust_id, reg_number, rent_date, return_date);
+        return Objects.hash(id, rentId, custId, regNumber, rentDate, returnDate);
     }
 
     public int getId() {
@@ -79,43 +80,43 @@ public class CurrentRentals {
         this.id = id;
     }
 
-    public String getRent_id() {
-        return rent_id;
+    public String getRentId() {
+        return rentId;
     }
 
-    public void setRent_id(String rent_id) {
-        this.rent_id = rent_id;
+    public void setRentId(String rentId) {
+        this.rentId = rentId;
     }
 
-    public String getCust_id() {
-        return cust_id;
+    public String getCustId() {
+        return custId;
     }
 
-    public void setCust_id(String cust_id) {
-        this.cust_id = cust_id;
+    public void setCustId(String custId) {
+        this.custId = custId;
     }
 
-    public String getReg_number() {
-        return reg_number;
+    public String getRegNumber() {
+        return regNumber;
     }
 
-    public void setReg_number(String reg_number) {
-        this.reg_number = reg_number;
+    public void setRegNumber(String regNumber) {
+        this.regNumber = regNumber;
     }
 
-    public String getRent_date() {
-        return rent_date;
+    public String getRentDate() {
+        return rentDate;
     }
 
-    public void setRent_date(String rent_date) {
-        this.rent_date = rent_date;
+    public void setRentDate(String rentDate) {
+        this.rentDate = rentDate;
     }
 
-    public String getReturn_date() {
-        return return_date;
+    public String getReturnDate() {
+        return returnDate;
     }
 
-    public void setReturn_date(String return_date) {
-        this.return_date = return_date;
+    public void setReturnDate(String returnDate) {
+        this.returnDate = returnDate;
     }
 }
