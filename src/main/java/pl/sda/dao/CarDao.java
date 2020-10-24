@@ -1,4 +1,9 @@
 package pl.sda.dao;
 
-public class CarDao {
+import pl.sda.model.Car;
+
+public class CarDao extends AbstractDao<Car> {
+    public CarDao() {super(Car.class); }
+
+
 }
