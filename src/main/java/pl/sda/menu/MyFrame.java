@@ -3,22 +3,32 @@ package pl.sda.menu;
 import javax.swing.*;
 import java.awt.*;
 
-public class MyFrame extends JFrame {
+public class MyFrame {
 
     public MyFrame() {
-        super("MENU - Wypożyczalnia samochodów");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(500,200);
-        setLocation(50,50);
-        setLayout(new GridBagLayout());
+
+        JFrame frame = new JFrame("MENU");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        BoxLayout boxLayout = new BoxLayout(frame.getContentPane(), BoxLayout.PAGE_AXIS);
+        frame.setLayout(boxLayout);
+
+        JLabel label = new JLabel("RENTAL CARS by Robert Włodarczyk");
+        JPanel panel = new JPanel();
+        frame.add(panel);
+        panel.add(label);
+
+        JPanel newPanel = new JPanel(new GridBagLayout());
 
 
+        newPanel.add(new JButton("Login"));
+        newPanel.add(new JButton("Rental"));
+        newPanel.add(new JButton("Car availability"));
+        newPanel.add(new JButton("Logout"));
+        frame.add(newPanel);
 
 
-        add(new JButton("Logowanie"));
-        add(new JButton("Wypożycz samochód"));
-        add(new JButton("Wyloguj"));
+        frame.setSize(500, 500);
+        frame.setVisible(true);
 
-        setVisible(true);
     }
 }
