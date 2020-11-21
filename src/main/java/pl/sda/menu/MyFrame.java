@@ -20,7 +20,7 @@ public class MyFrame {
         JPanel newPanel = new JPanel(new GridBagLayout());
 
 
-        newPanel.add(new JButton("Login"));
+        newPanel.add(new JButton("Wypożycz"));
         newPanel.add(new JButton("Rental"));
         newPanel.add(new JButton("Car availability"));
         newPanel.add(new JButton("Logout"));

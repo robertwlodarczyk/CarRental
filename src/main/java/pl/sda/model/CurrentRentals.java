@@ -16,10 +16,10 @@ public class CurrentRentals {
     @GenericGenerator(name = "currentRentalsSeq", strategy = "increment")
     private int id;
 
-    @Column
+    @ManyToOne
     private String rentId;
 
-    @Column
+    @ManyToOne
     private String custId;
 
     @Column
